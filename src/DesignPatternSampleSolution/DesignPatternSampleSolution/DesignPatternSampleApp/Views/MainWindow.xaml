@@ -1,0 +1,42 @@
+﻿<Window x:Class="DesignPatternSampleApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Design Pattern Sample" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 入力フォーム -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <TextBlock Text="First Name"/>
+                <TextBox Width="120" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <TextBlock Text="Last Name"/>
+                <TextBox Width="120" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <TextBlock Text="Department"/>
+                <TextBox Width="120" Text="{Binding Department, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <Button Content="Add" Width="80" Margin="0,0,10,0" 
+                    Command="{Binding AddCommand}"/>
+            <Button Content="Load" Width="80" 
+                    Command="{Binding LoadCommand}"/>
+        </StackPanel>
+
+        <!-- 社員一覧表示 -->
+        <ListBox Grid.Row="1" ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- 右側に編集・削除ボタンなど配置したい場合は別GridやDockPanelを使うなど -->
+    </Grid>
+</Window>

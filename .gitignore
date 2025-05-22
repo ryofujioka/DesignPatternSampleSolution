@@ -1,0 +1,103 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+Properties/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio temporary files
+.vscode/
+.vs/
+*.pidb
+*.sdf
+*.opensdf
+*.cachefile
+
+# DotCover / Rider / Resharper
+.idea/
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+
+# MSBuild Binary Log
+*.binlog
+
+# Publish outputs
+publish/
+*.Publish.xml
+
+# Local test results
+TestResults/
+*.trx
+*.vsmdi
+
+# Web-related artifacts (if self-hosted)
+wwwroot/
+node_modules/
+dist/
+build/
+
+# Windows crash reports
+*.stackdump
+
+# Rider & JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Rider UI settings
+ui_settings.xml
+
+# Ignore compiled localization files
+*.g.resources
+*.resources
+
+# Ignore database/local storage files
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# WPF specific generated files (by tools like Blend)
+*.g.cs
+*.g.i.cs
+*.i.cs
+
+# Ignore temporary files and backups
+*~
+*.bak
+*.tmp
+*.temp
+
+# Ignore images cache if using preview tools
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Others
+# Ignore your own secrets or config
+appsettings.*.json
+secrets.json
+
+# Optional: ignore Rider's workspace.xml, tasks.xml
+*.xml
+
+# If using Entity Framework (migrations output)
+Migrations/
+
+*config
